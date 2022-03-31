@@ -98,8 +98,8 @@ A distribuição ficou da seguinte maneira:
 - **Gerente de Projeto** :  Renato Nunes
 - **Arquiteto de software:**  Davi Silva
 - **Desenvolvedor Back-end:**  Victor Rocha
-- **Desenvolvedor Front-end:** Endy Custodio
-- **Desenvolvedor Mobile:** Guilherme Neves
+- **Desenvolvedor Front-end:** Guilherme Neves
+- **Desenvolvedor Mobile:** Endy Custodio
 
 
 
