@@ -40,25 +40,25 @@ Instituição de ensino - > Alunos da instuição em aprendizagem
 
 **Personas**
 
-- 
+- Jonas Silveira tem 21 anos e precisa do seu cadastro no sistema da instituição para realizar seus estudos.
 
-- 
+- Renato Braga tem 25 anos e é professor. Ele precisa do seu acesso ao sistema da instituição para aplicar uma prova.
 
-- 
+- Arthur Francisco tem 28 anos e precisa de uma conta admin na instituição para realizar o cadastro de um professor.
 
-- 
+- Marcos Silva tem 18 anos e acaba de entrar na faculdade, necessitando de um cadastro no sistema da instituição.
 
 **Histórias de Usuários**
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-- 
-
-- 
-
-- 
-
-- 
+|EU COMO... `PERSONA`  | QUERO/PRECISO ... `FUNCIONALIDADE`                                                                     |PARA ... `MOTIVO/VALOR`                 |
+|--------------------- |--------------------------------------------------------------------------------------------------------|----------------------------------------|
+| Usuário do sistema  1|Realizar o cadastro de aluno no sistema                                       | Realizar seus estudos |
+| Usuário do sistema  2|Acessar seu cadastro de professor                                                | Aplicar uma prova|
+| Usuário do sistema  3|Ter uma conta admin na instituição                                  | Realizar o cadastro de novos professores|
+| Usuário do sistema  4|Ter um cadastro de aluno no sistema                                                              | Acessar o Quiz do sistema |
+ 
 **Requisitos**
 
 **Requisitos Funcionais**
