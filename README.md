@@ -69,9 +69,9 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |RF-002| O acesso será feito através de login | ALTA |
 |RF-003| Permitir o cadastro de professores pelo admin | MÉDIA |
 |RF-004| Permitir a adição de matérias | MÉDIA |
-|RF-005| Permitir a diferenciação de um cadastro de aluno, professor e admin | ALTO |
-|RF-006| Permitir que o usuário edite suas informações | BAIXO |
-|RF-007| Permitir que o usuário admin edite informações dos cadastros | BAIXO |
+|RF-005| Permitir a diferenciação de um cadastro de aluno, professor e admin | ALTA |
+|RF-006| Permitir que o usuário edite suas informações | BAIXA |
+|RF-007| Permitir que o usuário admin edite informações dos cadastros | BAIXA |
 
 **Requisitos não Funcionais**
 
