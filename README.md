@@ -63,23 +63,25 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 **Requisitos Funcionais**
 
-- 
-
-- 
-
-- 
-
-- 
+|ID    | Descrição do Requisito  | Prioridade |
+|------|-----------------------------------------|----|
+|RF-001| Permitir o cadastro do aluno | ALTA | 
+|RF-002| O acesso será feito através de login | ALTA |
+|RF-003| Permitir o cadastro de professores pelo admin | MÉDIA |
+|RF-004| Permitir a adição de matérias | MÉDIA |
+|RF-005| Permitir a diferenciação de um cadastro de aluno, professor e admin | ALTO |
+|RF-006| Permitir que o usuário edite suas informações | BAIXO |
+|RF-007| Permitir que o usuário admin edite informações dos cadastros | BAIXO |
 
 **Requisitos não Funcionais**
 
-- 
-
-- 
-
-- 
-
-- 
+|ID     | Descrição do Requisito  |Prioridade |
+|-------|-------------------------|----|
+|RNF-001| Ter uma internet estável para acessar a página | ALTA | 
+|RNF-002| A página deve ser responsiva |  ALTA | 
+|RNF-003| A página deve armazenar as informações em um banco de dados |  ALTA |  
+|RNF-004| A página seguirá as premissas da LGPD |  MÉDIA |  
+|RNF-005| Senhas serão protegidas com criptografia |  MÉDIA | 
 
 **Metodologia**
 
