@@ -95,6 +95,29 @@ Para acompanhar e controlar os processos e a execução das atividades, iremos t
 
 Para nosso projeto, dividimos os integrantes em algumas funções, sendo cada um responsável pelas entregas em determinada área do projeto e acompanhamento na evolução do mesmo **.**
 
+**Telas da Aplicação Web (Em Desenvolvimento)**
+
+Login:
+<p align="center">
+<img src="https://i.imgur.com/yMRmMoN.png"/>
+</p>
+
+(Tela responsável pela autenticação dos usuários na plataforma)
+
+Cadastro:
+<p align="center">
+<img src="https://i.imgur.com/Q6JMMUB.png"/>
+</p>
+
+(Tela responsável pelo cadastro de novos usuários na plataforma)
+
+Edição de usuário:
+<p align="center">
+<img src="https://i.imgur.com/kDf1JPO.png"/>
+</p>
+
+(Tela responsável pela edição dos usuários existentes na plataforma)
+
 A distribuição ficou da seguinte maneira:
 
 - **Gerente de Projeto** :  Renato Nunes
