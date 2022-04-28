@@ -52,8 +52,10 @@ namespace Autenticacao_API.Controllers
                 Email = novoUsuario.Email,
                 Nome = novoUsuario.Nome,
                 Senha = novoUsuario.Senha,
-                Materia = novoUsuario.Materia,
+                Genero = novoUsuario.Genero,
                 Role = novoUsuario.Role,
+                Lgpd = novoUsuario.Lgpd,
+                Nascimento = novoUsuario.Nascimento
             };
 
             _context.Usuarios.Add(usuario);
@@ -76,8 +78,10 @@ namespace Autenticacao_API.Controllers
 
             usuarioBanco.Email = usuario.Email ?? usuarioBanco.Email;
             usuarioBanco.Senha = usuario.Senha ?? usuarioBanco.Senha;
-            usuarioBanco.Materia = usuario.Materia ?? usuarioBanco.Materia;
+            usuarioBanco.Genero = usuario.Genero ?? usuarioBanco.Genero;
             usuarioBanco.Role = usuario.Role ?? usuarioBanco.Role;
+            usuarioBanco.Lgpd = usuario.Lgpd ?? usuarioBanco.Lgpd;
+            usuarioBanco.Nascimento = usuario.Nascimento ?? usuarioBanco.Nascimento;
 
 
             _context.Usuarios.Update(usuarioBanco);
