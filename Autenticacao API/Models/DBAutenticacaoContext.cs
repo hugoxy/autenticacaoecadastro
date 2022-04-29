@@ -37,28 +37,21 @@ namespace Autenticacao_API.Models
                 entity.ToTable("Usuario");
 
                 entity.Property(e => e.Email)
-                    .HasMaxLength(100)
+                    .HasMaxLength(50)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Genero)
-                    .HasMaxLength(100)
+                    .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Lgpd)
-                    .HasMaxLength(100)
-                    .IsUnicode(false)
-                    .HasColumnName("LGPD");
-
-                entity.Property(e => e.Nascimento)
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
+                entity.Property(e => e.Nascimento).HasColumnType("datetime");
 
                 entity.Property(e => e.Nome)
-                    .HasMaxLength(100)
+                    .HasMaxLength(50)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Role)
-                    .HasMaxLength(100)
+                    .HasMaxLength(50)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Senha)

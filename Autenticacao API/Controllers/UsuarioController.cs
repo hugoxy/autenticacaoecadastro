@@ -1,9 +1,14 @@
-﻿using Autenticacao_API.Models;
+﻿using Autenticacao_API.DTOs.Autenticacao;
+using Autenticacao_API.DTOs.Usuario;
+using Autenticacao_API.Extensoes;
+using Autenticacao_API.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace Autenticacao_API.Controllers
@@ -13,39 +18,62 @@ namespace Autenticacao_API.Controllers
     public class UsuarioController : ControllerBase
     {
         private readonly DBAutenticacaoContext _context;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public UsuarioController(DBAutenticacaoContext context)
+        public UsuarioController(DBAutenticacaoContext context,
+            IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
+            _httpContextAccessor = httpContextAccessor;
         }
 
+        [Authorize(Roles = "Administrador,Professor")]
         [HttpGet]
-        public IActionResult ListaUsuarios()
+        public async Task<IActionResult> ListarUsuarios()
         {
-            var usuarios = _context.Usuarios.ToList();
+            IList<ListaUsuariosResponse> usuarios = await _context.Usuarios
+                .Select(x => new ListaUsuariosResponse
+                {
+                    Email = x.Email,
+                    Genero = x.Genero,
+                    Id = x.Id,
+                    Lgpd = x.Lgpd,
+                    Nome = x.Nome,
+                    Nascimento = x.Nascimento,
+                    Role = x.Role
+                }).ToListAsync();
+
             return Ok(usuarios);
         }
 
+        [Authorize(Roles = "Administrador,Professor,Aluno")]
         [HttpGet("{id}")]
-        public IActionResult ObterUsuarioPorID(int id)
+        public async Task<IActionResult> ObterUsuarioPorID(int id)
         {
             if (id == 0)
-            {
                 return BadRequest("O ID é um campo obrigatorio");
-            }
-            var usuario = _context.Usuarios.Where(x => x.Id == id).FirstOrDefault();
+
+            BuscaUsuarioResponse usuario = await _context.Usuarios
+                .Where(x => x.Id == id)
+                .Select(x => new BuscaUsuarioResponse
+                {
+                    Email = x.Email,
+                    Genero = x.Genero,
+                    Lgpd = x.Lgpd,
+                    Nome = x.Nome,
+                    Nascimento = x.Nascimento,
+                    Role = x.Role
+                }).FirstOrDefaultAsync();
 
             if (usuario == null)
-            {
                 return NotFound("Usuário não encontrado");
-            }
 
             return Ok(usuario);
         }
 
+        [Authorize(Roles = "Administrador,Professor")]
         [HttpPost]
-
-        public IActionResult AdicionarUsuario(Usuario novoUsuario)
+        public async Task<IActionResult> AdicionarUsuario(AdicionaUsuarioRequest novoUsuario)
         {
             var usuario = new Usuario
             {
@@ -58,23 +86,26 @@ namespace Autenticacao_API.Controllers
                 Nascimento = novoUsuario.Nascimento
             };
 
-            _context.Usuarios.Add(usuario);
+            await _context.Usuarios.AddAsync(usuario);
 
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
 
             return Ok("Usuários criado com sucesso");
         }
 
-        [HttpPut]
-        public IActionResult AtualizarUsuario(Usuario usuario)
+        [Authorize(Roles = "Administrador,Professor,Aluno")]
+        [HttpPut("{id}")]
+        public async Task<IActionResult> AtualizarUsuario(AdicionaUsuarioRequest usuario, int id)
         {
+            if (_httpContextAccessor.HttpContext.User.ObterCodigoUsuarioClaim() != id.ToString())
+                return Unauthorized("Usuário sem acesso a esse processo.");
 
-            var usuarioBanco = _context.Usuarios.Where(x => x.Id == usuario.Id).FirstOrDefault();
+            Usuario usuarioBanco = await _context.Usuarios
+                .Where(x => x.Id == id)
+                .FirstOrDefaultAsync();
 
             if (usuarioBanco == null)
-            {
                 return NotFound("Usuário não encontrado");
-            }
 
             usuarioBanco.Email = usuario.Email ?? usuarioBanco.Email;
             usuarioBanco.Senha = usuario.Senha ?? usuarioBanco.Senha;
@@ -83,31 +114,27 @@ namespace Autenticacao_API.Controllers
             usuarioBanco.Lgpd = usuario.Lgpd ?? usuarioBanco.Lgpd;
             usuarioBanco.Nascimento = usuario.Nascimento ?? usuarioBanco.Nascimento;
 
-
-            _context.Usuarios.Update(usuarioBanco);
-
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
 
             return Ok("Usuário atualizado");
         }
 
+        [Authorize(Roles = "Administrador,Professor")]
         [HttpDelete("{id}")]
-
-        public IActionResult DeletarUsuario(int id)
+        public async Task<IActionResult> DeletarUsuario(int id)
         {
-            var usuarioBanco = _context.Usuarios.Where(x => x.Id == id).FirstOrDefault();
+            Usuario usuarioBanco = await _context.Usuarios
+                .Where(x => x.Id == id)
+                .FirstOrDefaultAsync();
 
             if (id == 0)
-            {
                 return NotFound("Usuário não encontrado");
-            }
 
-            _context.Usuarios.Remove(usuarioBanco);
+            _context.Remove(usuarioBanco);
 
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
 
             return Ok("Usuário removido com sucesso");
-
         }
     }
 }
