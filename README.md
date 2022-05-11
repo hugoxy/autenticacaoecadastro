@@ -118,6 +118,16 @@ Edição de usuário:
 
 (Tela responsável pela edição dos usuários existentes na plataforma)
 
+**Schema (Dados dos usuários) [Alunos,Professores,Administradores]**
+<p align="center">
+<img src="https://i.imgur.com/VUdP2hs.jpg"/>
+</p>
+
+**Rotas - > Autenticação (JWT)  & Cadastro e manipulação de usuários**
+<p align="center">
+<img src="https://i.imgur.com/kDf1JPO.png"/>
+</p>
+
 A distribuição ficou da seguinte maneira:
 
 - **Gerente de Projeto** :  Renato Nunes
