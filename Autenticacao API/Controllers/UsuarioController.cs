@@ -1,6 +1,5 @@
 ﻿using Autenticacao_API.DTOs.Autenticacao;
 using Autenticacao_API.DTOs.Usuario;
-using Autenticacao_API.Extensoes;
 using Autenticacao_API.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -18,7 +17,6 @@ namespace Autenticacao_API.Controllers
     public class UsuarioController : ControllerBase
     {
         private readonly DBAutenticacaoContext _context;
-        private readonly IHttpContextAccessor _httpContextAccessor;
 
         public UsuarioController(DBAutenticacaoContext context,
             IHttpContextAccessor httpContextAccessor)
@@ -86,20 +84,29 @@ namespace Autenticacao_API.Controllers
                 Nascimento = novoUsuario.Nascimento
             };
 
-            await _context.Usuarios.AddAsync(usuario);
+            Usuario usuarioBanco = await _context.Usuarios
+                  .Where(x => x.Email == novoUsuario.Email)
+                  .FirstOrDefaultAsync();
 
-            await _context.SaveChangesAsync();
+            if (usuarioBanco == null)
+            {
+                await _context.Usuarios.AddAsync(usuario);
 
-            return Ok("Usuários criado com sucesso");
+                await _context.SaveChangesAsync();
+
+                return Ok("Usuário criado com sucesso");
+            }
+
+            return Unauthorized("Usuário já cadastrado");
+
+         
         }
 
         [Authorize(Roles = "Administrador,Professor,Aluno")]
         [HttpPut("{id}")]
         public async Task<IActionResult> AtualizarUsuario(AdicionaUsuarioRequest usuario, int id)
         {
-            if (_httpContextAccessor.HttpContext.User.ObterCodigoUsuarioClaim() != id.ToString())
-                return Unauthorized("Usuário sem acesso a esse processo.");
-
+            
             Usuario usuarioBanco = await _context.Usuarios
                 .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
