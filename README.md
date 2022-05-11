@@ -125,7 +125,12 @@ Edição de usuário:
 
 (Dados dos usuários)
 
-Obs: ID é prenchido automaticamente
+Predefinições:
+Genero: Masculino, Feminino, Outros
+LGPD: true, false
+Role: Administrador, Professor, Aluno
+
+Obs: ID é prenchido automaticamente (Incremento no banco)
 
 **Rotas - > Autenticação (JWT)  & Cadastro e manipulação de usuários**
 <p align="center">
