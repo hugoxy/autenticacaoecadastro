@@ -18,11 +18,9 @@ namespace Autenticacao_API.Controllers
     {
         private readonly DBAutenticacaoContext _context;
 
-        public UsuarioController(DBAutenticacaoContext context,
-            IHttpContextAccessor httpContextAccessor)
+        public UsuarioController(DBAutenticacaoContext context)
         {
             _context = context;
-            _httpContextAccessor = httpContextAccessor;
         }
 
         [Authorize(Roles = "Administrador,Professor")]
