@@ -123,10 +123,16 @@ Edição de usuário:
 <img src="https://i.imgur.com/VUdP2hs.jpg"/>
 </p>
 
+(Dados dos usuários)
+
+Obs: ID é prenchido automaticamente
+
 **Rotas - > Autenticação (JWT)  & Cadastro e manipulação de usuários**
 <p align="center">
-<img src="https://i.imgur.com/kDf1JPO.png"/>
+<img src="https://i.imgur.com/1mIJBuU.jpg"/>
 </p>
+
+(Rotas)
 
 A distribuição ficou da seguinte maneira:
 
