@@ -12,6 +12,14 @@
 
 **Integrantes:** Davi Costa, Endy Keveen Menezes, Guilherme Neves, Victor Rocha
 
+**A distribuição de papéis:**
+- **Orientador** : Kleber Souza
+- **Gerente de Projeto** :  Renato Nunes
+- **Scrum-master:**  Davi Silva
+- **Desenvolvedor Back-end:**  Victor Rocha
+- **Desenvolvedor Front-end:** Guilherme Neves
+- **Desenvolvedor Mobile:** Endy Custodio
+
 **Introdução**
 
 **Problema**
@@ -133,6 +141,7 @@ Role: Administrador, Professor, Aluno
 Obs: ID é prenchido automaticamente (Incremento no banco)
 
 **Rotas - > Autenticação (JWT)  & Cadastro e manipulação de usuários**
+
 <p align="center">
 <img src="https://i.imgur.com/1mIJBuU.jpg"/>
 </p>
@@ -146,7 +155,8 @@ Bearer *Token*
 (Rotas)
 
 **Criar usuário master**
-ˋˋˋ
+
+~~~
 /****** Script Insert ******/
 INSERT INTO [dbo].[Usuario]
 		(
@@ -165,10 +175,12 @@ INSERT INTO [dbo].[Usuario]
   'Administrador',
   'True',
   '2000-10-10');
-ˋˋˋ
+~~~
+
 **Colection pra manipulação da API via Postman**
 
-API Autenticacao.postman_collection.json (Nos arquivos de projeto)
+API Autenticacao.postman_collection.json 
+(Nos arquivos de projeto)
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/36079471/167991526-8da3cb57-24c2-4627-b7d1-96d0a800652a.png"/>
@@ -194,13 +206,8 @@ http://victorgontijo-001-site1.htempurl.com/api/Usuario/{{ID}}
 - Deletar Usuário:
 http://victorgontijo-001-site1.htempurl.com/api/Usuario/{{ID}}
 
-**A distribuição de papéis:**
-- **Orientador** : Kleber Souza
-- **Gerente de Projeto** :  Renato Nunes
-- **Arquiteto de software:**  Davi Silva
-- **Desenvolvedor Back-end:**  Victor Rocha
-- **Desenvolvedor Front-end:** Guilherme Neves
-- **Desenvolvedor Mobile:** Endy Custodio
+
+
 
 
 
