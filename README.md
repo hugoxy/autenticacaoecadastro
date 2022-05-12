@@ -146,7 +146,7 @@ Bearer *Token*
 (Rotas)
 
 **Criar usuário master**
-
+ˋˋˋ
 /****** Script Insert ******/
 INSERT INTO [dbo].[Usuario]
 		(
@@ -165,29 +165,33 @@ INSERT INTO [dbo].[Usuario]
   'Administrador',
   'True',
   '2000-10-10');
-
+ˋˋˋ
 **Colection pra manipulação da API via Postman**
 
 API Autenticacao.postman_collection.json (Nos arquivos de projeto)
-![image](https://user-images.githubusercontent.com/36079471/167991526-8da3cb57-24c2-4627-b7d1-96d0a800652a.png)
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/36079471/167991526-8da3cb57-24c2-4627-b7d1-96d0a800652a.png"/>
+</p>
 
 **URL's de conexão com API**
-Autenticar:
+
+- Autenticar:
 http://victorgontijo-001-site1.htempurl.com/api/Autenticacao/login
 
-Listar:
+- Listar:
 http://victorgontijo-001-site1.htempurl.com/api/Usuario
 
-Listar por ID:
+- Listar por ID:
 http://victorgontijo-001-site1.htempurl.com/api/Usuario/{{ID}}
 
-Adicionar Usuário:
+- Adicionar Usuário:
 http://victorgontijo-001-site1.htempurl.com/api/Usuario
 
-Alterar Usuário por ID: 
+- Alterar Usuário por ID: 
 http://victorgontijo-001-site1.htempurl.com/api/Usuario/{{ID}}
 
-Deletar Usuário:
+- Deletar Usuário:
 http://victorgontijo-001-site1.htempurl.com/api/Usuario/{{ID}}
 
 **A distribuição de papéis:**
