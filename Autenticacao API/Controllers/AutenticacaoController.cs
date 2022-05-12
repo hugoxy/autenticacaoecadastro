@@ -27,8 +27,8 @@ namespace Autenticacao_API.Controllers
             _configuration = configuration;
         }
 
-        [HttpGet("login")]
-        public async Task<IActionResult> Login([FromQuery] LoginRequest request)
+        [HttpPost("login")]
+        public async Task<IActionResult> Login(LoginRequest request)
         {
             Usuario usuario = await _context.Usuarios
                 .Where(x => x.Email == request.Email && x.Senha == request.Senha)
