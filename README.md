@@ -147,25 +147,51 @@ Bearer *Token*
 
 **Criar usuário master**
 
-USE [DBAutenticacao]
-GO
-
+/****** Script Insert ******/
 INSERT INTO [dbo].[Usuario]
-           ([Nome]
-           ,[Email]
-           ,[Senha]
-           ,[Genero]
-           ,[Role]
-           ,[Lgpd]
-           ,[Nascimento])
-     VALUES
-           ('Admin','Admin','Admin','Masculino','Administrador','true','2020-01-01');
+		(
+       [Nome]
+      ,[Email]
+      ,[Senha]
+      ,[Genero]
+      ,[Role]
+      ,[Lgpd]
+      ,[Nascimento])
+  VALUES(
+  'Administrador',
+  'Administrador',
+  'Administrador',
+  'Masculino',
+  'Administrador',
+  'True',
+  '2000-10-10');
 
+**Colection pra manipulação da API via Postman**
 
+API Autenticacao.postman_collection.json (Nos arquivos de projeto)
+![image](https://user-images.githubusercontent.com/36079471/167991526-8da3cb57-24c2-4627-b7d1-96d0a800652a.png)
 
+**URL's de conexão com API**
+Autenticar:
+http://victorgontijo-001-site1.htempurl.com/api/Autenticacao/login
 
-**A distribuição ficou da seguinte maneira:**
+Listar:
+http://victorgontijo-001-site1.htempurl.com/api/Usuario
 
+Listar por ID:
+http://victorgontijo-001-site1.htempurl.com/api/Usuario/{{ID}}
+
+Adicionar Usuário:
+http://victorgontijo-001-site1.htempurl.com/api/Usuario
+
+Alterar Usuário por ID: 
+http://victorgontijo-001-site1.htempurl.com/api/Usuario/{{ID}}
+
+Deletar Usuário:
+http://victorgontijo-001-site1.htempurl.com/api/Usuario/{{ID}}
+
+**A distribuição de papéis:**
+- **Orientador** : Kleber Souza
 - **Gerente de Projeto** :  Renato Nunes
 - **Arquiteto de software:**  Davi Silva
 - **Desenvolvedor Back-end:**  Victor Rocha
