@@ -145,7 +145,26 @@ Bearer *Token*
 
 (Rotas)
 
-A distribuição ficou da seguinte maneira:
+**Criar usuário master**
+
+USE [DBAutenticacao]
+GO
+
+INSERT INTO [dbo].[Usuario]
+           ([Nome]
+           ,[Email]
+           ,[Senha]
+           ,[Genero]
+           ,[Role]
+           ,[Lgpd]
+           ,[Nascimento])
+     VALUES
+           ('Admin','Admin','Admin','Masculino','Administrador','true','2020-01-01');
+
+
+
+
+**A distribuição ficou da seguinte maneira:**
 
 - **Gerente de Projeto** :  Renato Nunes
 - **Arquiteto de software:**  Davi Silva
