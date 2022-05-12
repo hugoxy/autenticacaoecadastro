@@ -137,6 +137,12 @@ Obs: ID é prenchido automaticamente (Incremento no banco)
 <img src="https://i.imgur.com/1mIJBuU.jpg"/>
 </p>
 
+A rota Autenticacao/Login retorna um token JWT.
+
+Esse token JWT deve ser utilizado no cabeçalho das demais requisições seguindo o padrão:
+
+Bearer *Token*
+
 (Rotas)
 
 A distribuição ficou da seguinte maneira:
