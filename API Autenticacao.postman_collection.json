@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "3585b48a-e149-4a72-ad12-436f4a02056b",
+		"name": "API Autenticacao",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Autenticar",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"{{Usuario}}\",\r\n  \"senha\": \"{{Senha}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://victorgontijo-001-site1.htempurl.com/api/Autenticacao/login",
+					"protocol": "http",
+					"host": [
+						"victorgontijo-001-site1",
+						"htempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"Autenticacao",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Usuários",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{Token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://victorgontijo-001-site1.htempurl.com/api/Usuario",
+					"protocol": "http",
+					"host": [
+						"victorgontijo-001-site1",
+						"htempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"Usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Usuário por ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{Token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://victorgontijo-001-site1.htempurl.com/api/Usuario/{{ID}}",
+					"protocol": "http",
+					"host": [
+						"victorgontijo-001-site1",
+						"htempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"Usuario",
+						"{{ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adicionar Usuário",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{Token}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"{{}}\",\r\n  \"email\": \"{{}}\",\r\n  \"genero\": \"Masculino\",\r\n  \"role\": \"Aluno\",\r\n  \"senha\": \"{{}}\",\r\n  \"lgpd\": true,\r\n  \"nascimento\": \"2022-05-12T00:00:00.000Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://victorgontijo-001-site1.htempurl.com/api/Usuario",
+					"protocol": "http",
+					"host": [
+						"victorgontijo-001-site1",
+						"htempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"Usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar Usuário por ID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{Token}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"{{}}\",\r\n  \"email\": \"{{}}\",\r\n  \"genero\": \"Masculino\",\r\n  \"role\": \"Aluno\",\r\n  \"senha\": \"{{}}\",\r\n  \"lgpd\": true,\r\n  \"nascimento\": \"2022-05-12T00:00:00.000Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://victorgontijo-001-site1.htempurl.com/api/Usuario/{{ID}}",
+					"protocol": "http",
+					"host": [
+						"victorgontijo-001-site1",
+						"htempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"Usuario",
+						"{{ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Usuário por ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{Token}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://victorgontijo-001-site1.htempurl.com/api/Usuario/{{ID}}",
+					"protocol": "http",
+					"host": [
+						"victorgontijo-001-site1",
+						"htempurl",
+						"com"
+					],
+					"path": [
+						"api",
+						"Usuario",
+						"{{ID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
