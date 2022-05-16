@@ -207,6 +207,10 @@ http://victorgontijo-001-site1.htempurl.com/api/Usuario/{{ID}}
 http://victorgontijo-001-site1.htempurl.com/api/Usuario/{{ID}}
 
 
+**Swagger para uso interno [Desenvolvedores]**
+http://victorgontijo-001-site1.htempurl.com/swagger/
+
+
 
 
 
