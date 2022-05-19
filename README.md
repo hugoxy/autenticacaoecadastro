@@ -210,6 +210,17 @@ http://victorgontijo-001-site1.htempurl.com/api/Usuario/{{ID}}
 **Swagger para uso interno [Desenvolvedores]**
 http://victorgontijo-001-site1.htempurl.com/swagger/
 
+**Dominio**
+
+Por questões de usabilidade foi configurado o dominio "minhaapi.ga"
+
+http://minhaapi.ga/swagger/index.html
+
+Caso seja mais o como o mesmo pode ser utilizado para todas as requisições.
+
+Seguindo o mesmo padrão:
+
+http://minhaapi.ga/api/autenticacao/login 
 
 
 
