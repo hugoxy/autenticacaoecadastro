@@ -1,4 +1,5 @@
 ﻿using Autenticacao_API.DTOs;
+using Autenticacao_API.DTOs.Usuario;
 using Autenticacao_API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -39,7 +40,13 @@ namespace Autenticacao_API.Controllers
 
             string token = GenerateJwtToken(usuario);
 
-            return Ok(token);
+            var autenticado = new UsuarioAutenticado
+            {
+                Id = usuario.Id,
+                Bearer = token
+            };
+
+            return Ok(autenticado);
         }
 
         private string GenerateJwtToken(Usuario user)

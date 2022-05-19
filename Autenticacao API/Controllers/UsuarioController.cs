@@ -112,6 +112,7 @@ namespace Autenticacao_API.Controllers
             if (usuarioBanco == null)
                 return NotFound("Usuário não encontrado");
 
+            usuarioBanco.Nome = usuario.Nome ?? usuarioBanco.Email;
             usuarioBanco.Email = usuario.Email ?? usuarioBanco.Email;
             usuarioBanco.Senha = usuario.Senha ?? usuarioBanco.Senha;
             usuarioBanco.Genero = usuario.Genero ?? usuarioBanco.Genero;
