@@ -216,7 +216,7 @@ Por questões de usabilidade foi configurado o dominio "minhaapi.ga"
 
 http://minhaapi.ga/swagger/index.html
 
-Caso seja mais o como o mesmo pode ser utilizado para todas as requisições.
+Caso seja mais o comodo, o mesmo pode ser utilizado para todas as requisições.
 
 Seguindo o mesmo padrão:
 
