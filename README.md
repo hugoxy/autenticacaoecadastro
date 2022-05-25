@@ -103,7 +103,11 @@ Para acompanhar e controlar os processos e a execução das atividades, iremos t
 
 Para nosso projeto, dividimos os integrantes em algumas funções, sendo cada um responsável pelas entregas em determinada área do projeto e acompanhamento na evolução do mesmo **.**
 
-**Telas da Aplicação Web (Em Desenvolvimento)**
+**Telas da Aplicação Web **
+
+**Link do repositório git do Front-End:**
+
+https://github.com/NevesGui/Login-e-Cadastro-Front
 
 Login:
 <p align="center">
