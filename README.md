@@ -108,7 +108,7 @@ Para nosso projeto, dividimos os integrantes em algumas funções, sendo cada um
 
 
 # Front-End
-O front-end do projeto está disponibilizado através do seguinte direretorio:
+O front-end do projeto está disponibilizado através do seguinte diretorio:
 
 https://github.com/NevesGui/Login-e-Cadastro-Front
 
