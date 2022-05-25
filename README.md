@@ -103,11 +103,7 @@ Para acompanhar e controlar os processos e a execução das atividades, iremos t
 
 Para nosso projeto, dividimos os integrantes em algumas funções, sendo cada um responsável pelas entregas em determinada área do projeto e acompanhamento na evolução do mesmo **.**
 
-**Telas da Aplicação Web **
-
-**Link do repositório git do Front-End:**
-
-https://github.com/NevesGui/Login-e-Cadastro-Front
+**Telas da Aplicação Web**
 
 Login:
 <p align="center">
@@ -143,6 +139,19 @@ LGPD: true, false
 Role: Administrador, Professor, Aluno
 
 Obs: ID é prenchido automaticamente (Incremento no banco)
+
+# Front-End
+O front-end do projeto está disponibilizado através do seguinte direretorio:
+
+https://github.com/NevesGui/Login-e-Cadastro-Front
+
+Acesso diretamente ao Front-End publicado:
+
+http://nevesg-001-site1.dtempurl.com/login
+
+# Back-End
+
+O back-end da aplicação está presente nesse diretorio do Github.
 
 **Rotas - > Autenticação (JWT)  & Cadastro e manipulação de usuários**
 
