@@ -7,6 +7,7 @@
 <img src="https://wiki.opasuite.com.br/images/thumb/f/f8/Download_%283%29.png/300px-Download_%283%29.png"/>
 </p>
 
+# Documentação
 
 **Aplicações Distribuídas - Autenticação do sistemas e cruds de cadastro de usuários [Aplicações Distribuidas]**
 
@@ -103,6 +104,18 @@ Para acompanhar e controlar os processos e a execução das atividades, iremos t
 
 Para nosso projeto, dividimos os integrantes em algumas funções, sendo cada um responsável pelas entregas em determinada área do projeto e acompanhamento na evolução do mesmo **.**
 
+
+
+
+# Front-End
+O front-end do projeto está disponibilizado através do seguinte direretorio:
+
+https://github.com/NevesGui/Login-e-Cadastro-Front
+
+Acesso diretamente ao Front-End publicado:
+
+http://nevesg-001-site1.dtempurl.com/login
+
 **Telas da Aplicação Web**
 
 Login:
@@ -126,6 +139,16 @@ Edição de usuário:
 
 (Tela responsável pela edição dos usuários existentes na plataforma)
 
+# Back-End
+
+O back-end da aplicação está presente nesse diretorio do Github.
+
+https://github.com/hugoxy/autenticacaoecadastro/
+
+Acesso diretamente para o Back-end publicado (Uso Interno - Swagger):
+http://minhaapi.ga/swagger/index.html
+
+
 **Schema (Dados dos usuários) [Alunos,Professores,Administradores]**
 <p align="center">
 <img src="https://i.imgur.com/VUdP2hs.jpg"/>
@@ -140,18 +163,6 @@ Role: Administrador, Professor, Aluno
 
 Obs: ID é prenchido automaticamente (Incremento no banco)
 
-# Front-End
-O front-end do projeto está disponibilizado através do seguinte direretorio:
-
-https://github.com/NevesGui/Login-e-Cadastro-Front
-
-Acesso diretamente ao Front-End publicado:
-
-http://nevesg-001-site1.dtempurl.com/login
-
-# Back-End
-
-O back-end da aplicação está presente nesse diretorio do Github.
 
 **Rotas - > Autenticação (JWT)  & Cadastro e manipulação de usuários**
 
